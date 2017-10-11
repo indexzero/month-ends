@@ -1,0 +1,32 @@
+{
+  "name": "month-ends",
+  "version": "0.0.0",
+  "description": "Purposefully simple and dependency free functions for calendar months.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indexzero/month-ends.git"
+  },
+  "keywords": [
+    "dates",
+    "date-fns",
+    "moment",
+    "months",
+    "month-ends"
+  ],
+  "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indexzero/month-ends/issues"
+  },
+  "homepage": "https://github.com/indexzero/month-ends#readme",
+  "devDependencies": {
+    "assume": "^1.5.2",
+    "diagnostics": "^1.1.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1"
+  }
+}
