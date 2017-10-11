@@ -4,7 +4,7 @@ Purposefully simple and dependency free functions for calendar months
 
 ## Usage
 
-**`monthEnds`**
+#### `monthEnds`
 ``` js
 const monthEnds = require('month-ends');
 
@@ -18,7 +18,7 @@ console.dir(monthEnds(start, end));
 //  [ 2015-04-01T04:00:00.000Z, 2015-04-30T04:00:00.000Z ] ]
 ```
 
-**`lastDayOfMonth`**
+#### `lastDayOfMonth`
 ``` js
 const { lastDayOfMonth } = require('month-ends');
 
@@ -28,7 +28,7 @@ console.dir(end.toDateString());
 // 'Tue Jun 30 2015'
 ```
 
-**`firstDayOfMonth`**
+#### `firstDayOfMonth`
 ``` js
 const { firstDayOfMonth } = require('month-ends');
 
@@ -38,7 +38,7 @@ console.dir(end.toDateString());
 // 'Mon Jun 01 2015'
 ```
 
-**`firstDayOfNextMonth`**
+#### `firstDayOfNextMonth`
 ``` js
 const { firstDayOfNextMonth } = require('month-ends');
 
