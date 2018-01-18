@@ -1,6 +1,6 @@
 {
   "name": "month-ends",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Purposefully simple and dependency free functions for calendar months.",
   "main": "index.js",
   "scripts": {
