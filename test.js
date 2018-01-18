@@ -33,6 +33,24 @@ describe('month-ends', function () {
       assumeIsDate(expectedEnd, 2015, 01, 31);
     });
 
+    it('generates a single month range from exact start & end', function () {
+      const start = new Date('2017-12-01T00:00:00.000Z');
+      assumeIsDate(start, 2017, 12, 01);
+
+      const end = new Date('2017-12-31T00:00:00.000Z');
+      assumeIsDate(end, 2017, 12, 31);
+
+      const range = monthEnds(start, end);
+
+      assume(range).is.an('array');
+      assume(range.length).equals(1);
+      assume(range[0]).is.an('array');
+
+      const [expectedStart, expectedEnd] = range[0];
+      assumeIsDate(expectedStart, 2017, 12, 01);
+      assumeIsDate(expectedEnd, 2017, 12, 31);
+    });
+
     it('generates ranges with a single year', function () {
       const start = new Date('2015-01-02');
       assumeIsDate(start, 2015, 01, 02);
