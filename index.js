@@ -7,12 +7,23 @@
  * @return {Array<Array<Integer>} Start and end day pairs in order.
  */
 const monthEnds = module.exports = function (start, end) {
-  const range = [[firstDayOfMonth(start), lastDayOfMonth(start)]];
+  const firstMonth = {
+    start: firstDayOfMonth(start),
+    end: lastDayOfMonth(start)
+  };
+
+  const range = [[firstMonth.start, firstMonth.end]];
   const max = {
     year: end.getUTCFullYear(),
     month: end.getUTCMonth(),
     day: end.getUTCDate()
   };
+
+  if (firstMonth.end.getUTCFullYear() === max.year
+    && firstMonth.end.getUTCMonth() === max.month
+    && firstMonth.end.getUTCDate() === max.day) {
+    return range;
+  }
 
   let next = firstDayOfNextMonth(start);
   while (lteDayOfYear(next, max)) {
